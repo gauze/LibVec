@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<AllProjectProperties>
+	<ProjectProperties>
+		<Class>Project</Class>
+		<Name>LibVec</Name>
+		<FileVersion>2</FileVersion>
+		<ProjectName>LibVec</ProjectName>
+		<DirectoryName></DirectoryName>
+		<Path>projects/LibVec</Path>
+		<MainFile></MainFile>
+		<Description>some routines for code reuse.
+Ve
+that&apos;s what a library is.ctrex Assembly</Description>
+		<Version>1.0</Version>
+		<Author>various</Author>
+		<Bankswitching>none</Bankswitching>
+		<createBankswitchCode>false</createBankswitchCode>
+		<createGameLoopCode>false</createGameLoopCode>
+		<NumberOfBanks>1</NumberOfBanks>
+		<BankMainFiless>
+			<BankMainFiles></BankMainFiles>
+		</BankMainFiless>
+		<Extras>0</Extras>
+		<ProjectPreScriptClass></ProjectPreScriptClass>
+		<ProjectPreScriptName></ProjectPreScriptName>
+		<ProjectPostScriptClass></ProjectPostScriptClass>
+		<ProjectPostScriptName></ProjectPostScriptName>
+		<BankDefiness>
+			<BankDefines></BankDefines>
+		</BankDefiness>
+		<WheelName></WheelName>
+		<IsCDebugging>false</IsCDebugging>
+		<IsCPeephole>false</IsCPeephole>
+		<IsCKeepEnriched>false</IsCKeepEnriched>
+		<IsCProject>false</IsCProject>
+		<IsPeerCProject>false</IsPeerCProject>
+		<CFLAGS>-O3 -mint8 -msoft-reg-count=0 -quiet -IC/include</CFLAGS>
+		<IsCRumInlined>false</IsCRumInlined>
+	</ProjectProperties>
+</AllProjectProperties>
