@@ -7,7 +7,7 @@
 		<ProjectName>LibVec</ProjectName>
 		<DirectoryName></DirectoryName>
 		<Path>projects/LibVec</Path>
-		<MainFile></MainFile>
+		<MainFile>libsoundraw.i</MainFile>
 		<Description>some routines for code reuse.
 Ve
 that&apos;s what a library is.ctrex Assembly</Description>
@@ -18,7 +18,7 @@ that&apos;s what a library is.ctrex Assembly</Description>
 		<createGameLoopCode>false</createGameLoopCode>
 		<NumberOfBanks>1</NumberOfBanks>
 		<BankMainFiless>
-			<BankMainFiles></BankMainFiles>
+			<BankMainFiles>libsoundraw.i</BankMainFiles>
 		</BankMainFiless>
 		<Extras>0</Extras>
 		<ProjectPreScriptClass></ProjectPreScriptClass>
