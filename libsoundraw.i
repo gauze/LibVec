@@ -30,6 +30,27 @@ PSG_Ch1_Vol   = 8
 PSG_Ch2_Vol   = 9
 PSG_Ch3_Vol   = 10
 
+;		0 - Voice 1 use Tone Generator 1 On/Off
+;		1 - Voice 2 use Tone Generator 2 On/Off
+;		2 - Voice 3 use Tone Generator 3 On/Off
+;		3 - Voice 1 use Noise Generator On/Off
+;		4 - Voice 2 use Noise Generator On/Off
+;		5 - Voice 3 use Noise Generator On/Off
+; MASK aliases for PSG_OnOff register
+Ch1_Tone_On = %00000001
+Ch2_Tone_On = %00000010
+Ch3_Tone_On = %00000100
+Ch1_Noise_On = %00001000
+Ch2_Noise_On = %00010000
+Ch3_Noise_On = %00100000
+Ch_All_Tone_On =  %00000111
+Ch_All_Noise_On =  %00111000
+Ch_All_Tone_Off =  %00000000
+Ch_All_Noise_Off =  %00000000
+; for 2 channels AND together
+; ex: lda   #Ch1_Tone_On & Ch3_Tone_On 
+
+
 ; Sound effects 
 ; ALL
 MUTE = 0
@@ -178,7 +199,8 @@ menu_JB4Press:
 bzSfxInit: 
                               ;set mixer 
           lda      #PSG_OnOff
-          ldb      #%00011100 
+;          ldb      #%00011100 
+		  ldb      #Ch3_Tone_On & Ch1_Noise_On & Ch2_Noise_On
           jsr      Sound_Byte_raw 
                               ;set vol 
           lda      #PSG_Ch1_Vol 
@@ -511,7 +533,8 @@ Do_Sound_FX_C3Boing:
           beq      Do_Sound_FX_C3SoundOff 
           ;set mixer 
           lda      #PSG_OnOff 
-          ldb      #%00111000 
+;          ldb      #%00111000 
+		  ldb      #Ch_All_Noise_On
           jsr      Sound_Byte_raw 
           ldd      #2000 
           std      tempW1 
@@ -543,7 +566,8 @@ Do_Sound_FX_C3Shot:
           beq      Do_Sound_FX_C3SoundOff 
           ;set mixer byte 
           lda      #PSG_OnOff
-          ldb      #%00011100 
+          ;ldb      #%00011100 
+		  ldb      #Ch3_Tone_On & Ch1_Noise_On & Ch2_Noise_On
           jsr      Sound_Byte_raw 
           ;set noise pitch 
           lda      #PSG_Noise
@@ -564,7 +588,8 @@ Do_Sound_FX_C3Explosion:
           beq      Do_Sound_FX_C3SoundOff 
           ;set mixer byte 
           lda      #PSG_OnOff
-          ldb      #%00011100 
+          ;ldb      #%00011100 
+		  ldb      #Ch3_Tone_On & Ch1_Noise_On & Ch2_Noise_On
           jsr      Sound_Byte_raw 
           ;set noise pitch 
           lda      #PSG_Noise 
