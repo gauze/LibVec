@@ -1,0 +1,69 @@
+; ADDITIONAL BIOS/EXEC stuff not in vectrex.i
+
+G2      equ     $00          ;     G = 1.5 8ves below middle C
+GS2     equ     $01          ;     G sharp (second 8ve) , etc.
+A2      equ     $02
+AS2     equ     $03
+B2      equ     $04
+C3      equ     $05
+CS3     equ     $06
+D3      equ     $07
+DS3     equ     $08
+E3      equ     $09
+F3      equ     $0A
+FS3     equ     $0B
+G3      equ     $0C
+GS3     equ     $0D
+A3      equ     $0E
+AS3     equ     $0F
+B3      equ     $10
+C4      equ     $11
+CS4     equ     $12
+D4      equ     $13
+DS4     equ     $14
+E4      equ     $15
+F4      equ     $16
+FS4     equ     $17
+G4      equ     $18
+GS4     equ     $19
+A4      equ     $1A
+AS4     equ     $1B
+B4      equ     $1C
+C5      equ     $1D
+CS5     equ     $1E
+D5      equ     $1F
+DS5     equ     $20
+E5      equ     $21
+F5      equ     $22
+FS5     equ     $23
+G5      equ     $24
+GS5     equ     $25
+A5      equ     $26
+AS5     equ     $27
+B5      equ     $28
+C6      equ     $29
+CS6     equ     $2A
+D6      equ     $2B
+DS6     equ     $2C
+E6      equ     $2D
+F6      equ     $2E
+FS6     equ     $2F
+G6      equ     $30
+GS6     equ     $31
+A6      equ     $32
+AS6     equ     $33
+B6      equ     $34
+C7      equ     $35
+CS7     equ     $36
+D7      equ     $37
+DS7     equ     $38
+E7      equ     $39
+F7      equ     $3A
+FS7     equ     $3B
+G7      equ     $3C
+GS7     equ     $3D
+A7      equ     $3E
+REST     equ     $3F
+PISH	equ		$40
+;  END
+
