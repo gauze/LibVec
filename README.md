@@ -13,7 +13,9 @@ if you already have it installed locally
 file: LibVecProjectProperty.xml is a project file from VIDE
 
 doc/ contains Documentation files
+
 examples/ are code examples of how to use the libraries
+
 lib/ is where the library stuff lives.
 
 
