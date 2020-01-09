@@ -1,21 +1,31 @@
-# LibVec
+# LibVec  
 
-some assembly routines to make stuff easier.
-code reuse.
-library.
+some assembly routines to make stuff easier.  
+code reuse.  
+library.  
+A collection of routines I've modified from other code for ease of  
+understanding or BIOS routines made into macros for quick use to save a  
+few cycles at the expense of ROM space. 
 
-newest version always here:
-git clone https://github.com/gauze/LibVec.git
-or
-git pull
-if you already have it installed locally
+Thanks to Malban Vide, Chris Malcolm, Graham Toal, probably others 
+for reused/borrowed code. 
 
-file: LibVecProjectProperty.xml is a project file from VIDE
+newest version always here:  
+git clone https://github.com/gauze/LibVec.git  
+or 
+git pull 
+if you already have it installed locally 
 
-doc/ contains Documentation files
+file: LibVecProjectProperty.xml is a project file from VIDE 
 
-examples/ are code examples of how to use the libraries
+doc/ contains Documentation files 
 
-lib/ is where the library stuff lives.
+examples/ are code examples of how to use the libraries 
 
+lib/ is where the library stuff lives. 
+lib/drawing/ : line and list drawing 
+lib/eeprom-ds2431/ : MAXIM DS2431 1-Wire EEPROM routines 
+lib/general/ : misc stuff math, housekeeping, timing ... 
+lib/sound/ :  audio  
+lib/text-printing/ : printing text on the screen, duh.  
 
