@@ -13,18 +13,15 @@ fmt1cnt             ds       1
 fmt0cnt             ds       1 
 
 ; in your game reset routine zero all vars the macro uses
-                    clra
-                    sta      frm100cnt
-                    sta      frm50cnt
-                    sta      frm25cnt
-                    sta      frm20cnt
-                    sta      frm10cnt
-                    sta      frm5cnt
-                    sta      frm4cnt
-                    sta      frm3cnt
-                    sta      frm2cnt
-                    sta      fmt1cnt
+reset_counters:
+                    clrd
+                    std      frm100cnt
+                    std      frm25cnt
+                    std      frm10cnt
+                    std      frm4cnt
+                    std      frm2cnt
                     sta      fmt0cnt
+		    rts
 
 ; @@@@ Macro to increment and reset timers
 ; place in main loop, called once per frame
