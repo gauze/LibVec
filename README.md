@@ -1,5 +1,7 @@
 # LibVec  
 
+VERSION 0.01 pre-Alpha
+
 some assembly routines to make stuff easier.  
 code reuse.  
 library.  
