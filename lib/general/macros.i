@@ -20,7 +20,7 @@ _Abs_b              TSTB
 abs_end 
                     endm     
 ;
-std                 macro
+clrd                 macro
 					ldd #$0000
 					endm
 ;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
