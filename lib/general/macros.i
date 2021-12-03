@@ -19,6 +19,10 @@ _Abs_b              TSTB
                     DECB     
 abs_end 
                     endm     
+;
+std                 macro
+					ldd #$0000
+					endm
 ;%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 RESET0REF           macro    
                     ldd      #$00CC 
