@@ -1,6 +1,6 @@
-; timer that counts up in .2 second intervals
-; have to set some variables in RAM to use this:
-; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+;; timer that counts up in .02 second intervals
+;; have to set some variables in RAM to use this:
+;; xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ;timestr             ds       9 
 ;min 
 ;                    ds       4 
@@ -13,6 +13,11 @@
 ;_centsec            ds       3 
 ;temp1               ds       2
 ;temp2		     ds       2
+;
+;TIMEUP              ds       1       ; flag set when timer reaches 00:00.00
+;; IF using a pause function add below
+;PAUSE              ds       1
+; and set as flag 0 = running clock non-0 = paused
 ;xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ; result printable with Print_Str functions eg
 ;         ldu #timestr
@@ -158,7 +163,10 @@ CLOCK_COUNTDOWN     macro
                     bne      centsec_cont                 ; no 
                     ldd      _min                         ; check min '00' 
                     cmpd     # '00'
-                    lbeq      zero_seconds_left            ; time is 00:00.00 time expired 
+                    bne      centsec_cont 
+                    lda      #1 
+                    sta      TIMEUP 			  ; set timeup flag
+                    lbra     zero_seconds_left            ; time is 00:00.00 time expired 
 * get to work on 1/100th of second                 
 centsec_cont 
                     ldd      _centsec                     ; test 2nd digit if over 0 , cont
@@ -264,10 +272,6 @@ FORMAT_CLOCK_STR    macro
                     sta      8,x 
                     endm     
 ;
-********************************************************
-;                  CLOCK_COUNTDOWN
-;                called once per Wait_Recal loop
-;                assumes 50 frames per second
 ********************************************************
 CLEAR_SCORE_ZERO    macro    
                     LDD      # '0'*256+'0'                ;Store the leading blanks
